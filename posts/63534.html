@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+    <meta name="author" content="TimhLiu">
+
+
+    <meta name="subtitle" content="世路无穷，劳生有限，似此区区长鲜欢">
+
+
+    <meta name="description" content="TimhLiu's blog">
+
+
+    <meta name="keywords" content="TimhLiu">
+
+
+
+
+
+
+<title>test | TimhLiu</title>
+
+
+
+
+    <link rel="icon" href="https://blog-1252856717.cos.ap-beijing.myqcloud.com/picture/favicon/favicon.ico">
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+
+    
+    
+        
+    
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="TimhLiu" type="application/atom+xml">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <div class="navbar-header header-logo"><a href="/">TimhLiu&#39;s blog</a></div>
+
+            <div class="menu navbar-right">
+
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+
+        <div class="container">
+
+            <div class="navbar-header">
+
+                <div>
+                    <a href="/">TimhLiu&#39;s blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+
+            </div>
+
+            <div class="menu" id="mobile-menu">
+
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+            toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+
+        <div class="main">
+            <div class="container">
+
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list"></div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+
+<script>
+    
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+    
+
+    <article class="post-wrap">
+
+        <header class="post-header">
+            <h1 class="post-title">test</h1>
+            
+                <div class="post-meta">
+
+                    
+                        Author: <a itemprop="author" rel="author" href="/">TimhLiu</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2020-04-29</a>
+                        </span>
+                    
+
+                    
+                        <span class="post-category">
+                        Category: 
+                            
+                                <a href="/categories/a/">a</a>
+                            
+                        </span>
+                    
+
+                    
+						<span class="page-pv">
+    				    View: <a href="#"><span class="busuanzi-value" id="busuanzi_value_page_pv"></span></a>
+						</span>
+					
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h1 id="h1"><a href="#h1" class="headerlink" title="h1"></a>h1</h1><h2 id="h2"><a href="#h2" class="headerlink" title="h2"></a>h2</h2><h3 id="h3"><a href="#h3" class="headerlink" title="h3"></a>h3</h3><h4 id="h4"><a href="#h4" class="headerlink" title="h4"></a>h4</h4><h5 id="h5"><a href="#h5" class="headerlink" title="h5"></a>h5</h5><h6 id="h6"><a href="#h6" class="headerlink" title="h6"></a>h6</h6><br/>
+
+<div class="image-box">
+                <img src="https://blog-1252856717.cos.ap-beijing.myqcloud.com/picture/posts/2020/0429/sebastian-huxley-i60bLSFmzQE-unsplash.jpg" alt="Picture is missing!" title="原图" class="">
+                <p class="image-box-title">原图</p>
+            </div>
+
+<div class="image-box">
+                <img src="https://blog-1252856717.cos.ap-beijing.myqcloud.com/picture/posts/2020/0429/sebastian-huxley-i60bLSFmzQE-unsplash2.jpg" alt="Picture is missing!" title="压缩66%后" class="">
+                <p class="image-box-title">压缩66%后</p>
+            </div>
+
+<br/>
+
+<blockquote>
+<p>真性湛渊，如澄止水；憎爱击之，烦恼浪起。</p>
+<p>起之不休，自性浑浊；烦恼无明，愈增不觉。</p>
+<p>以我取彼，如泥入水；以彼动我，如膏益火。</p>
+<p>彼乱我真，乱实我生；我苦不生，劫烧成冰。</p>
+<p>是故至人，先空我相；我相若空，彼从何障。</p>
+<p>忘我之功，在乎坚忍；习气才发，忽然猛省。</p>
+<p>省处即觉，一念回光；扫踪绝迹，当下清凉。</p>
+<p>清凉寂静，挺然独立；恬澹怡神，物无与敌。</p>
+</blockquote>
+<br/>
+
+<ol>
+<li>有</li>
+<li>序</li>
+<li>列</li>
+<li>表</li>
+</ol>
+<br/>
+
+<ul>
+<li>无</li>
+<li>序</li>
+<li>列</li>
+<li>表</li>
+</ul>
+<br/>
+
+<ul>
+<li><input disabled="" type="checkbox"> 复</li>
+<li><input disabled="" type="checkbox"> 选</li>
+<li><input disabled="" type="checkbox"> 框</li>
+</ul>
+<br/>
+
+<p>水平分割线</p>
+<hr>
+<br/>
+
+<table>
+<thead>
+<tr>
+<th align="center">标题1</th>
+<th align="center">标题2</th>
+<th align="center">标题3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a</td>
+<td align="center">j</td>
+<td align="center">x</td>
+</tr>
+<tr>
+<td align="center">b</td>
+<td align="center">k</td>
+<td align="center">y</td>
+</tr>
+<tr>
+<td align="center">c</td>
+<td align="center">l</td>
+<td align="center">z</td>
+</tr>
+</tbody></table>
+<br/>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> edu.whut.dao.impl;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.Query;</span><br><span class="line"><span class="keyword">import</span> org.hibernate.SessionFactory;</span><br><span class="line"><span class="keyword">import</span> org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Repository;</span><br><span class="line"><span class="keyword">import</span> org.springframework.transaction.annotation.Transactional;</span><br><span class="line"><span class="keyword">import</span> edu.whut.dao.IStationDAO;</span><br><span class="line"><span class="keyword">import</span> edu.whut.model.Station;</span><br><span class="line"> </span><br><span class="line"><span class="meta">@Transactional</span></span><br><span class="line"><span class="meta">@Repository(value = &quot;stationDAO&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StationDAOImpl</span> <span class="keyword">implements</span> <span class="title">IStationDAO</span> </span>&#123;</span><br><span class="line">	<span class="meta">@Autowired</span></span><br><span class="line">	<span class="keyword">private</span> SessionFactory sessionFactory;</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Station <span class="title">findById</span><span class="params">(String id)</span></span>&#123;</span><br><span class="line">		Query query = sessionFactory.getCurrentSession().createQuery(<span class="string">&quot;from Station where id=&#x27;&quot;</span>+id+<span class="string">&quot;&#x27;&quot;</span>);</span><br><span class="line">		List&lt;Station&gt; stationList =  query.list();</span><br><span class="line">		<span class="keyword">if</span>(stationList.size()==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		Station rsStation = stationList.get(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">return</span> rsStation;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> List&lt;Station&gt; <span class="title">findMainStation</span><span class="params">()</span></span>&#123;</span><br><span class="line">		Query query = sessionFactory.getCurrentSession().createQuery(<span class="string">&quot;from Station where inPipe=1 order by tstamp&quot;</span>);</span><br><span class="line">		List&lt;Station&gt; stationList =  query.list();</span><br><span class="line">		<span class="keyword">return</span> stationList;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * 根据监测站编号查询监测站</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> number	监测站编号</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	</span><br><span class="line">	<span class="meta">@Override</span></span><br><span class="line">	<span class="meta">@SuppressWarnings(&quot;unchecked&quot;)</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> Station <span class="title">findByNumber</span><span class="params">(String number)</span></span>&#123;</span><br><span class="line">		Query query = sessionFactory.getCurrentSession().createQuery(<span class="string">&quot;from Station where number=&#x27;&quot;</span> + number + <span class="string">&quot;&#x27;&quot;</span>);</span><br><span class="line">		List&lt;Station&gt; stationList =  query.list();</span><br><span class="line">		<span class="keyword">if</span>(stationList.size()==<span class="number">0</span>)</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">		Station station = stationList.get(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">return</span> station;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        
+            <section class="post-copyright">
+
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>TimhLiu</span>
+                    </p>
+                
+
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://timhliu.me/posts/63534.html">https://timhliu.me/posts/63534.html</a></span>
+                    </p>
+                
+
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</span>
+                    </p>
+                
+
+                
+
+            </section>
+        
+
+        <section class="post-tags">
+
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/b/"># b</a>
+                    
+                        
+                </span>
+            </div>
+
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span> · </span>
+                <a href="/">home</a>
+            </div>
+
+        </section>
+
+        <section class="post-nav">
+
+            
+
+            
+
+        </section>
+
+    </article>
+
+</div>
+        </div>
+        
+        <footer id="footer" class="footer">
+
+    <div class="copyright">
+
+        <span>Copyright © 2019-2020 TimhLiu | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a><br/>
+        
+        
+  		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<span class="site-uv">
+    访客量:
+    <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+</span>&nbsp;
+
+
+
+<span class="site-pv">
+    浏览量:
+    <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+</span>
+
+        
+        
+        </span>
+        
+    </div>
+
+</footer>
+    </div>
+</body>
+
+</html>
