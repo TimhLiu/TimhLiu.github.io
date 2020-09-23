@@ -703,7 +703,7 @@ header label {
 }
 .post-content {
   padding-top: 2rem;
-  text-align: justify;
+  text-align: left;
 }
 .post-content h2,
 .post-content h3,
