@@ -24,7 +24,7 @@
 
 
 
-<title>win10个人向优化 | TimhLiu</title>
+<title>AdobeFlashPlayer安装步骤 | TimhLiu</title>
 
 
 
@@ -216,7 +216,7 @@
     <article class="post-wrap">
 
         <header class="post-header">
-            <h1 class="post-title">win10个人向优化</h1>
+            <h1 class="post-title">AdobeFlashPlayer安装步骤</h1>
             
                 <div class="post-meta">
 
@@ -250,33 +250,15 @@
         </header>
 
         <div class="post-content">
-            <h2 id="1-打开Windows-PowerShell"><a href="#1-打开Windows-PowerShell" class="headerlink" title="1.打开Windows PowerShell"></a>1.打开Windows PowerShell</h2><p>关闭休眠文件hiberfil.sys  <strong>powercfg -h off</strong></p>
-<p>开启卓越性能  <strong>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</strong></p>
-<h2 id="2-打开注册表编辑器"><a href="#2-打开注册表编辑器" class="headerlink" title="2.打开注册表编辑器"></a>2.打开注册表编辑器</h2><h3 id="2-1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"><a href="#2-1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹" class="headerlink" title="2.1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"></a>2.1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions<br><strong>删除</strong>：</p>
-<ul>
-<li>图片：{0ddd015d-b06c-45d5-8c4c-f59713854639}</li>
-<li>视频：{35286a68-3c57-41a1-bbb1-0eae73d76c95}</li>
-<li>下载：{7d83ee9b-2244-4e70-b1f5-5393042af1e4}</li>
-<li>音乐：{a0c69a99-21c8-4671-8703-7934162fcf1d}</li>
-<li>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</li>
-<li>文档：{f42ee2d3-909f-4907-8871-4c22fc0bf756}<br>注：对应的PropertyBag项手动新建一个“字符串值”将其命名为ThisPCPolicy，并赋值Hide，一样可以起到隐藏作用</li>
-</ul>
-<h3 id="2-2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"><a href="#2-2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹" class="headerlink" title="2.2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"></a>2.2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br><strong>删除</strong>：</p>
-<ul>
-<li>图片：{24ad3ad4-a569-4530-98e1-ab02f9417aa8}</li>
-<li>视频：{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}</li>
-<li>下载：{088e3905-0323-4b02-9826-5d99428e115f}</li>
-<li>音乐：{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}</li>
-<li>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</li>
-<li>文档：{d3162b92-9365-467a-956b-92703aca08af}</li>
-<li>3D对象：{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}</li>
-</ul>
-<h3 id="2-3隐藏文件资源管理器侧栏网络"><a href="#2-3隐藏文件资源管理器侧栏网络" class="headerlink" title="2.3隐藏文件资源管理器侧栏网络"></a>2.3隐藏文件资源管理器侧栏网络</h3><p>路径：HKEY_CLASSES_ROOT\CLSID{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder<br>改权限，Attributes中的b0040064改为b0940064</p>
-<h3 id="2-4桌面右下角时间显秒"><a href="#2-4桌面右下角时间显秒" class="headerlink" title="2.4桌面右下角时间显秒"></a>2.4桌面右下角时间显秒</h3><p>路径：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced<br>新建 DWORD（32位）值，并命名ShowSecondsInSystemClock，双击打开将十六进制数值数据改为1，然后重启电脑</p>
-<h3 id="2-5删除桌面右键菜单“显示设置”与“个性化”"><a href="#2-5删除桌面右键菜单“显示设置”与“个性化”" class="headerlink" title="2.5删除桌面右键菜单“显示设置”与“个性化”"></a>2.5删除桌面右键菜单“显示设置”与“个性化”</h3><p>路径：HKEY_CLASSES_ROOT\DesktopBackground\Shell</p>
-<h3 id="2-6右键新建菜单项删除与排序"><a href="#2-6右键新建菜单项删除与排序" class="headerlink" title="2.6右键新建菜单项删除与排序"></a>2.6右键新建菜单项删除与排序</h3><p>路径：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes<br>禁用继承，修改所有者为Administrator，只允许Administrator完全控制，其它均为读取，修改后再把Administrator改为读取即可防止恢复</p>
-<h3 id="2-7右键菜单“发送到”删除无用项"><a href="#2-7右键菜单“发送到”删除无用项" class="headerlink" title="2.7右键菜单“发送到”删除无用项"></a>2.7右键菜单“发送到”删除无用项</h3><p>路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo</p>
-<p>不要的直接删除即可</p>
+            <h2 id="1-下载Flash国际版离线安装包"><a href="#1-下载Flash国际版离线安装包" class="headerlink" title="1.下载Flash国际版离线安装包"></a>1.下载Flash国际版离线安装包</h2><h3 id="Internet-Explorer-ActiveX-for-XP-和-Win7"><a href="#Internet-Explorer-ActiveX-for-XP-和-Win7" class="headerlink" title="Internet Explorer - ActiveX(for XP 和 Win7)"></a>Internet Explorer - ActiveX(for XP 和 Win7)</h3><p><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ax.exe">https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ax.exe</a><br><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player_ax.exe">https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player_ax.exe</a></p>
+<h3 id="Firefox-NPAPI"><a href="#Firefox-NPAPI" class="headerlink" title="Firefox - NPAPI"></a>Firefox - NPAPI</h3><p><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player.exe">https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player.exe</a><br><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player.exe">https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player.exe</a></p>
+<h3 id="Chrome-和其它基于-Chromium-的浏览器-PPAPI"><a href="#Chrome-和其它基于-Chromium-的浏览器-PPAPI" class="headerlink" title="Chrome 和其它基于 Chromium 的浏览器 - PPAPI"></a>Chrome 和其它基于 Chromium 的浏览器 - PPAPI</h3><p><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe">https://fpdownload.macromedia.com/pub/flashplayer/latest/help/install_flash_player_ppapi.exe</a><br><a target="_blank" rel="noopener" href="https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player_ppapi.exe">https://fpdownload.macromedia.com/get/flashplayer/latest/help/install_flash_player_ppapi.exe</a></p>
+<h2 id="2-断网安装离线安装包"><a href="#2-断网安装离线安装包" class="headerlink" title="2.断网安装离线安装包"></a>2.断网安装离线安装包</h2><h2 id="3-替换破解文件"><a href="#3-替换破解文件" class="headerlink" title="3.替换破解文件"></a>3.替换破解文件</h2><p>32位系统，将32位文件替换到 C:\Windows\System32\Macromed\Flash 下覆盖同名文件</p>
+<p>64位系统，先将2个32位文件替换到 C:\Windows\SysWOW64\Macromed\Flash 下覆盖同名文件，再将剩下的那个64位文件替换到 C:\Windows\System32\Macromed\Flash 下覆盖同名文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">三种类型的 Flash 破解文件一共有9个，分别是：</span><br><span class="line"></span><br><span class="line">ActiveX类型：Flash32_**_0_0_***.ocx、Flash64_**_0_0_***.ocx、FlashUtil32_**_0_0_***_ActiveX.exe</span><br><span class="line"></span><br><span class="line">NPAPI类型：FlashUtil32_**_0_0_***_Plugin.exe、NPSWF32_**_0_0_***.dll、NPSWF64_**_0_0_***.dll</span><br><span class="line"></span><br><span class="line">PPAPI类型：FlashUtil32_**_0_0_***_pepper.exe、pepflashplayer32_**_0_0_***.dll、pepflashplayer64_**_0_0_***.dll</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-注意事项"><a href="#4-注意事项" class="headerlink" title="4.注意事项"></a>4.注意事项</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">4.1替换 ActiveX 版 ocx 文件时会提示“目标文件夹访问被拒绝-您需要权限来进行此操作”，请在原版文件上右键-属性-安全-高级-权限-更改权限-把拒绝的权限项目全都删掉</span><br><span class="line"></span><br><span class="line">4.2Windows 8.1&#x2F;10 不需要安装 ActiveX 版 Flash 安装包，For Windows 10 的 Edge 和 For Windows 8.1&#x2F;10 的 IE 的 嵌入式的 ActiveX 版 Flash 是通过系统补丁的方式推送安装的，这样安装的 Flash 插件没有区域限制问题，所以无须替换</span><br><span class="line"></span><br><span class="line">4.3Chrome 和其它基于 Chromium 的浏览器，请直接使用“Adobe Flash Player PPAPI **.0.0.*** for Chromium”直接替换文件，路径是 User Data\PepperFlash\**.0.0.***\下的 manifest.json 和 pepflashplayer.dll</span><br><span class="line"></span><br><span class="line">4.4**.0.0.***指的是 Flash 的版本号，如果使用的是百分浏览器，则不需要套这个版本号文件夹</span><br></pre></td></tr></table></figure>
+
 
         </div>
 
@@ -293,7 +275,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="https://timhliu.me/posts/5270.html">https://timhliu.me/posts/5270.html</a></span>
+                        <span><a href="https://timhliu.me/posts/3564.html">https://timhliu.me/posts/3564.html</a></span>
                     </p>
                 
 
@@ -316,7 +298,7 @@
                 <span class="tag">
                     
                     
-                        <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/"># 系统优化</a>
+                        <a href="/tags/AdobeFlashPlayer/"># AdobeFlashPlayer</a>
                     
                         
                 </span>
@@ -333,11 +315,11 @@
         <section class="post-nav">
 
             
-                <a class="prev" rel="prev" href="/posts/3564.html">AdobeFlashPlayer安装步骤</a>
+                <a class="prev" rel="prev" href="/posts/4863.html">隐藏百度网盘PC版侧栏左下角广告</a>
             
 
             
-            <a class="next" rel="next" href="/posts/3205.html">沁园春·孤馆灯青</a>
+            <a class="next" rel="next" href="/posts/5270.html">win10个人向优化</a>
             
 
         </section>

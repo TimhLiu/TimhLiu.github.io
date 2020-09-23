@@ -24,7 +24,7 @@
 
 
 
-<title>Category | TimhLiu</title>
+<title>隐藏百度网盘PC版侧栏左下角广告 | TimhLiu</title>
 
 
 
@@ -144,115 +144,122 @@
 </script>
 
         <div class="main">
+            <div class="container">
+
+    
+    
+    
+
+    <article class="post-wrap">
+
+        <header class="post-header">
+            <h1 class="post-title">隐藏百度网盘PC版侧栏左下角广告</h1>
             
-
-    <div class="container">
-
-        <div class="post-wrap categories">
-
-            <h2 class="post-title">-&nbsp;Categories&nbsp;-</h2>
-
-            <div class="categories-card">
-
-                
+                <div class="post-meta">
 
                     
-
-                    <div class="card-item">
-
-                        <div class="categories">
-
-                            <a href="/categories/Windows/">
-                                <h3>
-                                    <i class="iconfont icon-category" style="padding-right:3px"></i>
-                                    Windows
-                                </h3>
-                            </a>
-
-                            
-
-                                
-
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link"
-                                           href="/posts/5270.html">win10个人向优化</a>
-                                    </article>
-                                
-
-                            
-
-                                
-
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link"
-                                           href="/posts/3564.html">AdobeFlashPlayer安装步骤</a>
-                                    </article>
-                                
-
-                            
-
-                                
-
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link"
-                                           href="/posts/4863.html">隐藏百度网盘PC版侧栏左下角广告</a>
-                                    </article>
-                                
-
-                            
-                            
-                            
-
-                        </div>
-
-                    </div>
-
-                
-
+                        Author: <a itemprop="author" rel="author" href="/">TimhLiu</a>
                     
 
-                    <div class="card-item">
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2020-09-23</a>
+                        </span>
+                    
 
-                        <div class="categories">
-
-                            <a href="/categories/%E5%85%B6%E5%AE%83/">
-                                <h3>
-                                    <i class="iconfont icon-category" style="padding-right:3px"></i>
-                                    其它
-                                </h3>
-                            </a>
-
+                    
+                        <span class="post-category">
+                        Category: 
                             
-
-                                
-
-                                
-                                    <article class="archive-item">
-                                        <a class="archive-item-link"
-                                           href="/posts/3205.html">沁园春·孤馆灯青</a>
-                                    </article>
-                                
-
+                                <a href="/categories/Windows/">Windows</a>
                             
-                            
-                            
+                        </span>
+                    
 
-                        </div>
+                    
+						<span class="page-pv">
+    				    View: <a href="#"><span class="busuanzi-value" id="busuanzi_value_page_pv"></span></a>
+						</span>
+					
 
-                    </div>
+                </div>
+            
+        </header>
 
-                
+        <div class="post-content">
+            <p>1.完全关闭百度网盘PC版进程</p>
+<p>2.使用解压工具打开C:\Users\用户名\AppData\Roaming\baidu\</p>
+<p>BaiduNetdisk\skin\duiengineskin.zip\xml\MainPanel\NetdiskPanel\LeftPanel.xml</p>
+<p>3.找到下列代码片段，将pos里的四个数值改为0，退出并保存</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--广告面板--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dlg</span> <span class="attr">name</span>=<span class="string">&quot;dlg_ad&quot;</span> <span class="attr">pos</span>=<span class="string">&quot;0,0,0,0&quot;</span> <span class="attr">show</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--与AdPanel.xml内容一致--&gt;</span></span><br></pre></td></tr></table></figure>
 
-            </div>
+<p>注：百度网盘PC版更新后，需重新修改</p>
 
         </div>
 
-    </div>
+        
+            <section class="post-copyright">
 
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>TimhLiu</span>
+                    </p>
+                
 
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://timhliu.me/posts/4863.html">https://timhliu.me/posts/4863.html</a></span>
+                    </p>
+                
+
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</span>
+                    </p>
+                
+
+                
+
+            </section>
+        
+
+        <section class="post-tags">
+
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98/"># 百度网盘</a>
+                    
+                        
+                </span>
+            </div>
+
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span> · </span>
+                <a href="/">home</a>
+            </div>
+
+        </section>
+
+        <section class="post-nav">
+
+            
+
+            
+            <a class="next" rel="next" href="/posts/3564.html">AdobeFlashPlayer安装步骤</a>
+            
+
+        </section>
+
+    </article>
+
+</div>
         </div>
         
         <footer id="footer" class="footer">
