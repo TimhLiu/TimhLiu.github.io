@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+
+    <meta name="author" content="TimhLiu">
+
+
+    <meta name="subtitle" content="世路无穷，劳生有限，似此区区长鲜欢">
+
+
+    <meta name="description" content="TimhLiu's blog">
+
+
+    <meta name="keywords" content="TimhLiu">
+
+
+
+
+
+
+<title>win10个人向优化 | TimhLiu</title>
+
+
+
+
+    <link rel="icon" href="https://blog-1252856717.cos.ap-beijing.myqcloud.com/picture/favicon/favicon.ico">
+
+
+
+
+
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+
+
+    
+    
+        
+    
+
+<meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="TimhLiu" type="application/atom+xml">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header>
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <div class="navbar-header header-logo"><a href="/">TimhLiu&#39;s blog</a></div>
+
+            <div class="menu navbar-right">
+
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+
+        <div class="container">
+
+            <div class="navbar-header">
+
+                <div>
+                    <a href="/">TimhLiu&#39;s blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+
+            </div>
+
+            <div class="menu" id="mobile-menu">
+
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+            toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+
+        <div class="main">
+            <div class="container">
+
+    
+    
+        <div class="post-toc">
+    <div class="tocbot-list"></div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+
+<script>
+    
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
+    
+
+    <article class="post-wrap">
+
+        <header class="post-header">
+            <h1 class="post-title">win10个人向优化</h1>
+            
+                <div class="post-meta">
+
+                    
+                        Author: <a itemprop="author" rel="author" href="/">TimhLiu</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">2020-09-23</a>
+                        </span>
+                    
+
+                    
+                        <span class="post-category">
+                        Category: 
+                            
+                                <a href="/categories/Windows/">Windows</a>
+                            
+                        </span>
+                    
+
+                    
+						<span class="page-pv">
+    				    View: <a href="#"><span class="busuanzi-value" id="busuanzi_value_page_pv"></span></a>
+						</span>
+					
+
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <h3 id="打开Windows-PowerShell"><a href="#打开Windows-PowerShell" class="headerlink" title="打开Windows PowerShell"></a>打开Windows PowerShell</h3><p>关闭休眠文件hiberfil.sys  <strong>powercfg -h off</strong></p>
+<p>开启卓越性能  <strong>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</strong></p>
+<h3 id="打开注册表编辑器"><a href="#打开注册表编辑器" class="headerlink" title="打开注册表编辑器"></a>打开注册表编辑器</h3><h4 id="去掉文件资源管理器中“此电脑”里的6个子文件夹"><a href="#去掉文件资源管理器中“此电脑”里的6个子文件夹" class="headerlink" title="去掉文件资源管理器中“此电脑”里的6个子文件夹"></a>去掉文件资源管理器中“此电脑”里的6个子文件夹</h4><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions<br><strong>删除</strong>：</p>
+<ul>
+<li>图片：{0ddd015d-b06c-45d5-8c4c-f59713854639}</li>
+<li>视频：{35286a68-3c57-41a1-bbb1-0eae73d76c95}</li>
+<li>下载：{7d83ee9b-2244-4e70-b1f5-5393042af1e4}</li>
+<li>音乐：{a0c69a99-21c8-4671-8703-7934162fcf1d}</li>
+<li>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</li>
+<li>文档：{f42ee2d3-909f-4907-8871-4c22fc0bf756}<br>注：对应的PropertyBag项手动新建一个“字符串值”将其命名为ThisPCPolicy，并赋值Hide，一样可以起到隐藏作用</li>
+</ul>
+<h4 id="删除打开（一般出现在浏览器中上传文件时或选择路径时），此电脑后7个子文件夹"><a href="#删除打开（一般出现在浏览器中上传文件时或选择路径时），此电脑后7个子文件夹" class="headerlink" title="删除打开（一般出现在浏览器中上传文件时或选择路径时），此电脑后7个子文件夹"></a>删除打开（一般出现在浏览器中上传文件时或选择路径时），此电脑后7个子文件夹</h4><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br><strong>删除</strong>：</p>
+<ul>
+<li>图片：{24ad3ad4-a569-4530-98e1-ab02f9417aa8}</li>
+<li>视频：{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}</li>
+<li>下载：{088e3905-0323-4b02-9826-5d99428e115f}</li>
+<li>音乐：{3dfdf296-dbec-4fb4-81d1-6a3438bcf4de}</li>
+<li>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</li>
+<li>文档：{d3162b92-9365-467a-956b-92703aca08af}</li>
+<li>3D对象：{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}</li>
+</ul>
+<h4 id="隐藏左侧网络"><a href="#隐藏左侧网络" class="headerlink" title="隐藏左侧网络"></a>隐藏左侧网络</h4><p>路径：HKEY_CLASSES_ROOT\CLSID{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder<br>改权限，Attributes中的b0040064改为b0940064</p>
+<h4 id="时间显秒"><a href="#时间显秒" class="headerlink" title="时间显秒"></a>时间显秒</h4><p>路径：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced<br>新建 DWORD（32位）值，并命名ShowSecondsInSystemClock，双击打开将十六进制数值数据改为1，然后重启电脑</p>
+<h4 id="删除右键菜单“显示设置”与“个性化”"><a href="#删除右键菜单“显示设置”与“个性化”" class="headerlink" title="删除右键菜单“显示设置”与“个性化”"></a>删除右键菜单“显示设置”与“个性化”</h4><p>路径：HKEY_CLASSES_ROOT\DesktopBackground\Shell</p>
+<h4 id="右键新建菜单项删除与排序"><a href="#右键新建菜单项删除与排序" class="headerlink" title="右键新建菜单项删除与排序"></a>右键新建菜单项删除与排序</h4><p>路径：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes<br>禁用继承，修改所有者为Administrator，只允许Administrator完全控制，其它均为读取，修改后再把Administrator改为读取即可防止恢复</p>
+<h4 id="右键菜单“发送到”删除无用项"><a href="#右键菜单“发送到”删除无用项" class="headerlink" title="右键菜单“发送到”删除无用项"></a>右键菜单“发送到”删除无用项</h4><p>路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo</p>
+<p>不要的直接删除即可</p>
+
+        </div>
+
+        
+            <section class="post-copyright">
+
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>TimhLiu</span>
+                    </p>
+                
+
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://timhliu.me/posts/5270.html">https://timhliu.me/posts/5270.html</a></span>
+                    </p>
+                
+
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处！</span>
+                    </p>
+                
+
+                
+
+            </section>
+        
+
+        <section class="post-tags">
+
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                    
+                        <a href="/tags/%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96/"># 系统优化</a>
+                    
+                        
+                </span>
+            </div>
+
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span> · </span>
+                <a href="/">home</a>
+            </div>
+
+        </section>
+
+        <section class="post-nav">
+
+            
+
+            
+            <a class="next" rel="next" href="/posts/3205.html">沁园春·孤馆灯青</a>
+            
+
+        </section>
+
+    </article>
+
+</div>
+        </div>
+        
+        <footer id="footer" class="footer">
+
+    <div class="copyright">
+
+        <span>Copyright © 2019-2020 TimhLiu | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a><br/>
+        
+        
+  		  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<span class="site-uv">
+    访客量:
+    <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+</span>&nbsp;
+
+
+
+<span class="site-pv">
+    浏览量:
+    <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+</span>
+
+        
+        
+        </span>
+        
+    </div>
+
+</footer>
+    </div>
+</body>
+
+</html>
