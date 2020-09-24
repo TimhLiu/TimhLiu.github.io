@@ -252,7 +252,7 @@
         <div class="post-content">
             <h2 id="1-打开Windows-PowerShell"><a href="#1-打开Windows-PowerShell" class="headerlink" title="1.打开Windows PowerShell"></a>1.打开Windows PowerShell</h2><p>关闭休眠文件hiberfil.sys  <strong>powercfg -h off</strong></p>
 <p>开启卓越性能  <strong>powercfg -duplicatescheme e9a42b02-d5df-448d-aa00-03f14749eb61</strong></p>
-<h2 id="2-打开注册表编辑器"><a href="#2-打开注册表编辑器" class="headerlink" title="2.打开注册表编辑器"></a>2.打开注册表编辑器</h2><h3 id="2-1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"><a href="#2-1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹" class="headerlink" title="2.1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"></a>2.1去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions<br><strong>删除</strong>：</p>
+<h2 id="2-打开注册表编辑器"><a href="#2-打开注册表编辑器" class="headerlink" title="2.打开注册表编辑器"></a>2.打开注册表编辑器</h2><h3 id="2-1-去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"><a href="#2-1-去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹" class="headerlink" title="2.1 去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹"></a>2.1 去掉文件资源管理器侧栏中“此电脑”里的6个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions<br><strong>删除</strong>：</p>
 <ul>
 <li>图片：{0ddd015d-b06c-45d5-8c4c-f59713854639}</li>
 <li>视频：{35286a68-3c57-41a1-bbb1-0eae73d76c95}</li>
@@ -261,7 +261,7 @@
 <li>桌面：{B4BFCC3A-DB2C-424C-B029-7FE99A87C641}</li>
 <li>文档：{f42ee2d3-909f-4907-8871-4c22fc0bf756}<br>注：对应的PropertyBag项手动新建一个“字符串值”将其命名为ThisPCPolicy，并赋值Hide，一样可以起到隐藏作用</li>
 </ul>
-<h3 id="2-2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"><a href="#2-2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹" class="headerlink" title="2.2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"></a>2.2去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br><strong>删除</strong>：</p>
+<h3 id="2-2-去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"><a href="#2-2-去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹" class="headerlink" title="2.2 去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹"></a>2.2 去掉（一般出现在浏览器中上传文件时或选择路径时）此电脑里的7个子文件夹</h3><p>路径：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace<br><strong>删除</strong>：</p>
 <ul>
 <li>图片：{24ad3ad4-a569-4530-98e1-ab02f9417aa8}</li>
 <li>视频：{f86fa3ab-70d2-4fc7-9c99-fcbf05467f3a}</li>
@@ -271,11 +271,11 @@
 <li>文档：{d3162b92-9365-467a-956b-92703aca08af}</li>
 <li>3D对象：{0DB7E03F-FC29-4DC6-9020-FF41B59E513A}</li>
 </ul>
-<h3 id="2-3隐藏文件资源管理器侧栏网络"><a href="#2-3隐藏文件资源管理器侧栏网络" class="headerlink" title="2.3隐藏文件资源管理器侧栏网络"></a>2.3隐藏文件资源管理器侧栏网络</h3><p>路径：HKEY_CLASSES_ROOT\CLSID{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder<br>改权限，Attributes中的b0040064改为b0940064</p>
-<h3 id="2-4桌面右下角时间显秒"><a href="#2-4桌面右下角时间显秒" class="headerlink" title="2.4桌面右下角时间显秒"></a>2.4桌面右下角时间显秒</h3><p>路径：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced<br>新建 DWORD（32位）值，并命名ShowSecondsInSystemClock，双击打开将十六进制数值数据改为1，然后重启电脑</p>
-<h3 id="2-5删除桌面右键菜单“显示设置”与“个性化”"><a href="#2-5删除桌面右键菜单“显示设置”与“个性化”" class="headerlink" title="2.5删除桌面右键菜单“显示设置”与“个性化”"></a>2.5删除桌面右键菜单“显示设置”与“个性化”</h3><p>路径：HKEY_CLASSES_ROOT\DesktopBackground\Shell</p>
-<h3 id="2-6右键新建菜单项删除与排序"><a href="#2-6右键新建菜单项删除与排序" class="headerlink" title="2.6右键新建菜单项删除与排序"></a>2.6右键新建菜单项删除与排序</h3><p>路径：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes<br>禁用继承，修改所有者为Administrator，只允许Administrator完全控制，其它均为读取，修改后再把Administrator改为读取即可防止恢复</p>
-<h3 id="2-7右键菜单“发送到”删除无用项"><a href="#2-7右键菜单“发送到”删除无用项" class="headerlink" title="2.7右键菜单“发送到”删除无用项"></a>2.7右键菜单“发送到”删除无用项</h3><p>路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo</p>
+<h3 id="2-3-隐藏文件资源管理器侧栏网络"><a href="#2-3-隐藏文件资源管理器侧栏网络" class="headerlink" title="2.3 隐藏文件资源管理器侧栏网络"></a>2.3 隐藏文件资源管理器侧栏网络</h3><p>路径：HKEY_CLASSES_ROOT\CLSID{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}\ShellFolder<br>改权限，Attributes中的b0040064改为b0940064</p>
+<h3 id="2-4-桌面右下角时间显秒"><a href="#2-4-桌面右下角时间显秒" class="headerlink" title="2.4 桌面右下角时间显秒"></a>2.4 桌面右下角时间显秒</h3><p>路径：HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Advanced<br>新建 DWORD（32位）值，并命名ShowSecondsInSystemClock，双击打开将十六进制数值数据改为1，然后重启电脑</p>
+<h3 id="2-5-删除桌面右键菜单“显示设置”与“个性化”"><a href="#2-5-删除桌面右键菜单“显示设置”与“个性化”" class="headerlink" title="2.5 删除桌面右键菜单“显示设置”与“个性化”"></a>2.5 删除桌面右键菜单“显示设置”与“个性化”</h3><p>路径：HKEY_CLASSES_ROOT\DesktopBackground\Shell</p>
+<h3 id="2-6-右键新建菜单项删除与排序"><a href="#2-6-右键新建菜单项删除与排序" class="headerlink" title="2.6 右键新建菜单项删除与排序"></a>2.6 右键新建菜单项删除与排序</h3><p>路径：HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Discardable\PostSetup\ShellNew\Classes<br>禁用继承，修改所有者为Administrator，只允许Administrator完全控制，其它均为读取，修改后再把Administrator改为读取即可防止恢复</p>
+<h3 id="2-7-右键菜单“发送到”删除无用项"><a href="#2-7-右键菜单“发送到”删除无用项" class="headerlink" title="2.7 右键菜单“发送到”删除无用项"></a>2.7 右键菜单“发送到”删除无用项</h3><p>路径：C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\SendTo</p>
 <p>不要的直接删除即可</p>
 
         </div>
