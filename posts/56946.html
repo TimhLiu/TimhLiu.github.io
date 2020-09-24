@@ -148,6 +148,69 @@
 
     
     
+        <div class="post-toc">
+    <div class="tocbot-list"></div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+
+<script>
+    
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
     
 
     <article class="post-wrap">
@@ -194,8 +257,7 @@
 <p><font color='red'>4.解除卡米限制后以下46个系统软件均可精简且正常使用无任何影响</font></p>
 <p><font color='red'>5.按需卸载，有人不使用xx不代表所有人都不用xx，建议先备份再卸载</font></p>
 <p><font color='red'>6.删除对应文件夹然后重启设备即可完成卸载；将事先备份的文件夹恢复到原始位置，恢复原始权限然后重启设备即可完成恢复</font></p>
-<p><strong>product/app x1</strong></p>
-<table>
+<h3 id="product-app-x1"><a href="#product-app-x1" class="headerlink" title="product/app x1"></a>product/app x1</h3><table>
 <thead>
 <tr>
 <th align="left"><strong>文件夹名</strong></th>
@@ -209,8 +271,7 @@
 <td>Android辅助功能套件，无障碍服务，对用户的触摸及操作提供语音反馈，近而帮助视力有障碍的人士</td>
 </tr>
 </tbody></table>
-<p><strong>product/priv-app x3</strong></p>
-<table>
+<h3 id="product-priv-app-x3"><a href="#product-priv-app-x3" class="headerlink" title="product/priv-app x3"></a>product/priv-app x3</h3><table>
 <thead>
 <tr>
 <th><strong>文件夹名</strong></th>
@@ -234,8 +295,7 @@
 <td>与Google Play 商店包名相同，更新新版本到data/app后可卸载这个旧版本</td>
 </tr>
 </tbody></table>
-<p><strong>system/app x30</strong></p>
-<table>
+<h3 id="system-app-x30"><a href="#system-app-x30" class="headerlink" title="system/app x30"></a>system/app x30</h3><table>
 <thead>
 <tr>
 <th><strong>文件夹名</strong></th>
@@ -394,8 +454,7 @@
 <td>有道翻译引擎</td>
 </tr>
 </tbody></table>
-<p><strong>system/priv-app x12</strong></p>
-<table>
+<h3 id="system-priv-app-x12"><a href="#system-priv-app-x12" class="headerlink" title="system/priv-app x12"></a>system/priv-app x12</h3><table>
 <thead>
 <tr>
 <th><strong>文件夹名</strong></th>
