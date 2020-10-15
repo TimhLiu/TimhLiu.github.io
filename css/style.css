@@ -161,7 +161,7 @@ body {
   font-size: 11pt;
   font-weight: normal;
   line-height: 2em;
-  word-break: break-all;
+  word-break: break-word;
   background-color: #fff;
   color: #000;
   transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
