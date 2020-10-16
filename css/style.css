@@ -280,7 +280,6 @@ input[type="radio"]:not(:checked) + label:after {
 	display: inline-block;
 	height: 14px;
 	position: relative;
-	box-shadow: 0.2px 0.2px 1px 0.5px rgb(180,180,180);
 	width: 30px;
 }
 
@@ -298,7 +297,6 @@ input[type="radio"]:not(:checked) + label:after {
 
 .switch_default:checked + label {
 	background-color: #E6E6E6;
-	box-shadow: none;
 }
 
 .switch_default:checked + label:after {
